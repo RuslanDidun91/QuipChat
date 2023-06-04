@@ -16,7 +16,7 @@ export default function Home() {
         />
         <h2 className='mt-6 text-center text-xl font-bold tracking-tight
         text-gray-900'>
-          Sign in in your account
+          Sign in to your account
         </h2>
       </div>
       <AuthForm />
