@@ -1,8 +1,10 @@
 'use client'
-import { useState, useCallback } from 'react';
 import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
+import { BsGithub, BsGoogle } from 'react-icons/bs';
+import { useState, useCallback } from 'react';
 import Input from '@/app/components/inputs/Input';
 import Button from '@/app/components/Button';
+import AuthSocialButton from './AuthSocialButton';
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -53,6 +55,7 @@ const AuthForm = () => {
               label='Name'
               errors={errors}
               register={register}
+              disabled={isLoading}
             />
           )}
           <Input
@@ -61,6 +64,7 @@ const AuthForm = () => {
             type='email'
             errors={errors}
             register={register}
+            disabled={isLoading}
           />
           <Input
             id='password'
@@ -68,6 +72,7 @@ const AuthForm = () => {
             type='password'
             errors={errors}
             register={register}
+            disabled={isLoading}
           />
           <div>
             <Button
@@ -92,10 +97,28 @@ const AuthForm = () => {
           </div>
 
           <div className='mt-6 flex gap-2'>
-            <AuthSocialButton />
+            <AuthSocialButton
+              icon={BsGithub}
+              onClick={() => socialAction('github')}
+            />
+            <AuthSocialButton
+              icon={BsGoogle}
+              onClick={() => socialAction('Google')}
+            />
           </div>
-
         </div>
+
+        <div className='flex justify-center gap-2 text-sm mt-6 px-2 text-gray-500'>
+          <div>
+            {variant === 'LOGIN' ? 'New to QuipChat?' : 'Already have an account?'}
+          </div>
+          <div onClick={toggleVariant}
+            className='underline cursor-pointer'
+            >
+              {variant === 'LOGIN' ? 'Create an account': 'Log in'}
+          </div>
+        </div>
+
       </div>
     </div>
   )
