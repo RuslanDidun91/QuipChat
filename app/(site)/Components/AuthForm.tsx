@@ -5,6 +5,7 @@ import { useState, useCallback } from 'react';
 import Input from '@/app/components/inputs/Input';
 import Button from '@/app/components/Button';
 import AuthSocialButton from './AuthSocialButton';
+import axios from 'axios';
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -31,7 +32,7 @@ const AuthForm = () => {
     setIsLoading(true);
 
     if (variant === 'REGISTER') {
-      //axios register
+      axios.post('/api/register', data)
     }
     if (variant === 'LOGIN') {
       //NextAuth SignIn
@@ -114,8 +115,8 @@ const AuthForm = () => {
           </div>
           <div onClick={toggleVariant}
             className='underline cursor-pointer'
-            >
-              {variant === 'LOGIN' ? 'Create an account': 'Log in'}
+          >
+            {variant === 'LOGIN' ? 'Create an account' : 'Log in'}
           </div>
         </div>
 
