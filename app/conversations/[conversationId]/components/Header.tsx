@@ -6,6 +6,7 @@ import { HiChevronLeft } from 'react-icons/hi'
 import useOtherUser from "@/app/hooks/useOtherUser";
 import Avatar from "@/app/components/Avatar";
 import Link from "next/link";
+import ProfileDrawer from "./ProfileDrawer";
 
 
 interface HeaderProps {
