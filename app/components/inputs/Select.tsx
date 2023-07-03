@@ -1,5 +1,5 @@
 'use client';
-import ReactSelect from 'react-select'
+import ReactSelect from 'react-select';
 
 interface SelectProps {
   label: string;

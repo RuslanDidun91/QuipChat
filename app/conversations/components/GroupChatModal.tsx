@@ -6,9 +6,9 @@ import { useRouter } from 'next/navigation';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import Modal from '@/app/components/Modal';
-import Button from '../Button';
+import Button from '@/app/components/Button';
 import Input from "@/app/components/inputs/Input";
-import Select from '@/app/components/inputs/select';
+import Select from '@/app/components/inputs/Select';
 
 interface GroupChatModalProps {
   isOpen?: boolean;
