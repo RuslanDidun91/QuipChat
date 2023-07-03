@@ -6,6 +6,7 @@ import { HiChevronLeft } from 'react-icons/hi'
 import useOtherUser from "@/app/hooks/useOtherUser";
 import Avatar from "@/app/components/Avatar";
 import Link from "next/link";
+import ProfileDrawer from "./ProfileDrawer";
 
 
 interface HeaderProps {
@@ -51,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
           </div>
         </div>
         <HiEllipsisHorizontal size={32}
-          onClick={() => { }}
+          onClick={() => setDrawerOpen(true)}
           className="text-sky-500 cursor-pointer hover:text-sky-600 transition" />
       </div>
     </>
