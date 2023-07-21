@@ -1,6 +1,7 @@
 import PusherServer from 'pusher';
 import PusherClient from 'pusher-js';
 
+//! mark to protect invalid types
 export const pusherServer = new PusherServer({
   appId: process.env.PUSHER_APP_ID!,
   key: process.env.NEXT_PUBLIC_PUSHER_APP_KEY!,
