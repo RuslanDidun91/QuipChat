@@ -47,7 +47,6 @@ const Body: React.FC<BodyProps> = ({ initialMessages = [] }) => {
         if (currentMessage.id === newMessage.id) {
           return newMessage;
         }
-
         return currentMessage;
       }))
     };
